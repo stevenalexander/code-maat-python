@@ -22,10 +22,20 @@ git clone https://github.com/peternorrhall/code-maat.git
 
 or just download the [Dockerfile](https://raw.githubusercontent.com/peternorrhall/code-maat/master/Dockerfile)  and put into a directory of your choice.
 
+
+## Build the Docker image
+
+To build a local image pull this project run
+```
+docker build -t code-maat .
+````
+
+The Docker that is created downloads the code-maat Clojure repository and builds and exposes the code-maat jar file as an ENTRYPOINT in the image.
+
 After the build is completed verify that it works
 
 ```
-$docker run --rm code-maat
+docker run --rm code-maat
 ```
 
 and verify that the output is the help information on hot to use Code Maat
@@ -39,15 +49,6 @@ Usage: program-name -l log-file [options]
   -h, --help
 Please refer to the manual page for more information.
 ````
-
-## Build the Docker image
-
-To build a local image pull this project run
-```
-docker build -t code-maat .
-````
-
-The Docker that is created downloads the code-maat Clojure repository and builds and exposes the code-maat jar file as an ENTRYPOINT in the image.
 
 ## Generate input data
 
