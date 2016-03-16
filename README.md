@@ -20,7 +20,25 @@ Since you are here at Github you probably already have git install and all you n
 git clone https://github.com/peternorrhall/code-maat.git
 ````
 
-or just downloaded and put into a directory of your choice.
+or just download the [Dockerfile](https://raw.githubusercontent.com/peternorrhall/code-maat/master/Dockerfile)  and put into a directory of your choice.
+
+After the build is completed verify that it works
+
+```
+$docker run --rm code-maat
+```
+
+and verify that the output is the help information on hot to use Code Maat
+
+```
+This is Code Maat, a program used to collect statistics from a VCS.
+Version: 0.9.2-SNAPSHOT
+
+Usage: program-name -l log-file [options]
+...
+  -h, --help
+Please refer to the manual page for more information.
+````
 
 ## Build the Docker image
 
