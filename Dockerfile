@@ -21,4 +21,5 @@ RUN /usr/bin/lein uberjar
 WORKDIR target
 
 ENTRYPOINT ["java","-jar","code-maat-0.9.2-SNAPSHOT-standalone.jar"]
+CMD ["-h"]
     
