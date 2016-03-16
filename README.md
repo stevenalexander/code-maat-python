@@ -74,7 +74,7 @@ The log file (mygit.log) that you created earlier resides on the local system an
 
 ## Contributions
 
-This docker image uses work provided by Murphy MaMahon on how install [Leiningen](http://leiningen.org) in order to compile the Clojure code
+This docker image uses work provided by Murphy McMahon on how to install [Leiningen](http://leiningen.org) to compile the Code Maat Clojure code
 
 ## License
 
