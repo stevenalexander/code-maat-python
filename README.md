@@ -15,20 +15,11 @@ See [Installing Docker](https://docs.docker.com/engine/installation/)
 
 On the Docker site you find information on how to manage and run Docker containers.
 
-To create the image you only need to pull the Dockerfile locally by using Git
-
-```
-git clone https://github.com/peternorrhall/code-maat.git
-````
-
-or just download the [Dockerfile](https://raw.githubusercontent.com/peternorrhall/code-maat/master/Dockerfile) and put into a directory of your choice.
-
-
 ## Build the Docker image
 
-To build a Code Maat image run in the same directory as you placed the Dockerfile
+To build a Code Maat image run 
 ```
-docker build -t code-maat .
+docker build -t code-maat https://github.com/peternorrhall/code-maat.git
 ````
 
 The Docker image that is created downloads the code-maat Clojure repository and builds and exposes the code-maat jar file as an ENTRYPOINT in the image.
@@ -39,7 +30,7 @@ After the build is completed verify that it works by running
 docker run --rm code-maat
 ```
 
-and verify that the output is the help information on hot to use Code Maat
+and verify that the output is the help information on how to use Code Maat
 
 ```
 This is Code Maat, a program used to collect statistics from a VCS.

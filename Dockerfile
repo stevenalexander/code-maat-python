@@ -19,7 +19,11 @@ WORKDIR code-maat
 RUN /usr/bin/lein uberjar
 
 WORKDIR target
+# Rename the standalone jar to be version independant for the future
+RUN find . -name '*standalone*' -exec bash -c 'mv $0 codemaat-standalone.jar' {} \;
 
-ENTRYPOINT ["java","-jar","code-maat-0.9.2-SNAPSHOT-standalone.jar"]
+# ENTRYPOINT ["java","-jar","code-maat-0.9.2-SNAPSHOT-standalone.jar"]
+ENTRYPOINT ["java","-jar","codemaat-standalone.jar"]
+# ENTRYPOINT ["/usr/bin/lein", "run"]
 CMD ["-h"]
     
