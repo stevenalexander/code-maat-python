@@ -63,7 +63,8 @@ For example to analyse the code age of your files
 docker run --rm -v /Users/peter/Documents/code-maat:/codemaat code-maat -l /codemaat/mygit.log -c git -a age
 ```
 
-The log file (mygit.log) that you created earlier resides on the local system. To allow Code Maat to access you need to mount the local folder to the container using Docker's `-v` option. In the example above the mygit.log is located in `/Users/peter/Documents/code-maat`. This is linked to the container directory `/codemaat` which is used when the log file is specified for Code Maat with `-l /codemaat/mygit.log`. You can actually specify any directory of choice when you mount as long as you the same path for `-l` option.
+The log file (mygit.log) that you created earlier resides on the local system. To allow Code Maat to access you need to mount the local folder to the container using Docker's `-v` option. 
+In the example above the mygit.log is located in `/Users/peter/Documents/code-maat`. This is linked to the container directory `/codemaat` which is used when the log file is specified for Code Maat with `-l /codemaat/mygit.log`. You can specify any directory for the container when you mount as long as you use the same path for the `-l` option.
 
 `--rm` is used to remove the Docker container after the analysis is done
 
